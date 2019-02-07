@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "CSS Modder",
+    "version": "1.0",
+    "description":"Mod your css based on the type of website you visit.",
+    "icons": {
+        "128": "icon16.png",
+        "48": "icon16.png",
+        "16": "icon16.png"
+    },
+    "page_action": {
+        "default_icon": "icon16.png",
+        "default_title": "CSS Modder",
+        "default_popup": "popup.html" 
+    },
+    "background": {
+        "scripts": ["eventPage.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://mail.google.com/*"],
+            "js": ["content.js"],
+            "css":["content.css"]
+        }
+    ],
+    "options_page": "options.html",
+    "permissions": [
+        "https://mail.google.com/*",
+        "storage",
+        "notifications",
+        "contextMenus",
+        "tabs"
+    ]
+}

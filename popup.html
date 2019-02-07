@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Font Style</title>
+        <style>
+            body {
+                min-width: 200px;
+                min-height: 120px;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                padding: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Font Size: <span id="fontHeading">0</span></h1>
+        <input type="range" id="fontSize" min="5" max="30">
+        <input type="submit" id="changeSize" value="Change Font Size">
+        <script src='popup.js'></script>
+    </body>
+</html>
